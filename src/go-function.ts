@@ -1,7 +1,6 @@
 import * as aws_lambda_go_alpha from '@aws-cdk/aws-lambda-go-alpha'
 import * as cdk from 'aws-cdk-lib'
 import {Construct} from 'constructs'
-import {LAYER_NAME, LAYER_VERSION} from './constants'
 import {getExtensionLayerArn} from './get-extension-layer-arn'
 import {DecisionAlgorithmType, OptimeistProps} from './types'
 
@@ -65,8 +64,6 @@ export class GoFunction extends aws_lambda_go_alpha.GoFunction {
         this,
         'OptimeistLayer',
         getExtensionLayerArn({
-          version: props.optimeistProps.layerVersion || LAYER_VERSION,
-          layerName: LAYER_NAME,
           architecture: this.architecture,
         }),
       ),

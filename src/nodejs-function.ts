@@ -1,6 +1,5 @@
 import * as cdk from 'aws-cdk-lib'
 import {Construct} from 'constructs'
-import {LAYER_NAME, LAYER_VERSION} from './constants'
 import {getExtensionLayerArn} from './get-extension-layer-arn'
 import {DecisionAlgorithmType, OptimeistProps} from './types'
 
@@ -64,8 +63,6 @@ export class NodejsFunction extends cdk.aws_lambda_nodejs.NodejsFunction {
         this,
         'OptimeistLayer',
         getExtensionLayerArn({
-          version: props.optimeistProps.layerVersion || LAYER_VERSION,
-          layerName: LAYER_NAME,
           architecture: this.architecture,
         }),
       ),

@@ -17,9 +17,4 @@ export type OptimeistProps = {
    * @default DecisionAlgorithmType.BALANCED
    */
   decisionAlgorithmType?: DecisionAlgorithmType
-
-  /**
-   * Specifies the version of the layer to use
-   */
-  layerVersion?: number
 }
