@@ -63,7 +63,7 @@ export class PythonFunction extends aws_lambda_python_alpha.PythonFunction {
       cdk.aws_lambda.LayerVersion.fromLayerVersionArn(
         this,
         'OptimeistLayer',
-        getExtensionLayerArn({
+        getExtensionLayerArn(this, {
           architecture: this.architecture,
         }),
       ),

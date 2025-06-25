@@ -62,7 +62,7 @@ export class LambdaFunction extends cdk.aws_lambda.Function {
       cdk.aws_lambda.LayerVersion.fromLayerVersionArn(
         this,
         'OptimeistLayer',
-        getExtensionLayerArn({
+        getExtensionLayerArn(this, {
           architecture: this.architecture,
         }),
       ),

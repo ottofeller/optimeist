@@ -63,7 +63,7 @@ export class GoFunction extends aws_lambda_go_alpha.GoFunction {
       cdk.aws_lambda.LayerVersion.fromLayerVersionArn(
         this,
         'OptimeistLayer',
-        getExtensionLayerArn({
+        getExtensionLayerArn(this, {
           architecture: this.architecture,
         }),
       ),
