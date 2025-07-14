@@ -1,7 +1,6 @@
-# Optimeist constructs
+# Optimeist 
 
-
-## Published extensions
+## Published Optimeist layers
 | Region         | Arch   | ARN                                                                           |
 |----------------|--------|-------------------------------------------------------------------------------|
 | ap-northeast-1 | arm64  | arn:aws:lambda:ap-northeast-1:354918379484:layer:optimeist-extension-arm64:2  |

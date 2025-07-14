@@ -1,0 +1,19 @@
+[workspace]
+resolver = "2"
+
+members = [
+    "cli",
+    "extension",
+]
+
+[workspace.dependencies]
+aws-config = { version = "1.6.3", features = ["behavior-version-latest", "rustls"] }
+aws-sdk-lambda = { version = "1.83.0", features = ["behavior-version-latest", "rustls"] }
+aws-sdk-secretsmanager = { version = "1.75.0", features = ["behavior-version-latest", "rustls"] }
+chrono = { version = "0.4.41", features = ["serde"] }
+eyre = "0.6.12"
+reqwest = { version = "0.12.16", default-features = false, features = ["json", "rustls-tls"] }
+rustls = { version = "0.23.27", features = ["ring"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1" }
+tokio = { version = "1.45.1", features = ["full"] }

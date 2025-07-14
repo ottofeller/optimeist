@@ -1,0 +1,19 @@
+[package]
+name = "optimeist-extension"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aws-config = { workspace = true }
+aws-sdk-lambda = { workspace = true }
+aws-sdk-ssm = "1.62.1"
+aws-sdk-secretsmanager = { workspace = true }
+chrono = { workspace = true }
+eyre = { workspace = true }
+lambda-extension = "0.12"
+reqwest = { workspace = true }
+rustls = { workspace = true }
+serde = { workspace = true }
+tokio = { workspace = true }
+tracing = "0.1.41"
+tracing-subscriber = "0.3.19"
